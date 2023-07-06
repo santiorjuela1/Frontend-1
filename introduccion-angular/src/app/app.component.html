@@ -1,3 +1,15 @@
 <router-outlet> </router-outlet>
 
-<p>Hola</p>
+<div>
+  <p *ngFor="let libro of listaLibros">
+    {{ libro.autor }} -- {{ libro.idLibro }} -- {{ libro.titulo }}
+  </p>
+</div>
+
+<p>PROPERTY BINDING</p>
+
+<img [src]="imagenUrl" alt="" />
+
+<button [disabled]="activedButton" (click)="desactivarBoton(true)">
+  PROPERTY BINDING
+</button>
