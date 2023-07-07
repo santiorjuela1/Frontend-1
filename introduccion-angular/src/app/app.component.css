@@ -1,0 +1,17 @@
+.activo {
+  background-color: blue;
+  margin-left: 10cm;
+  color: azure;
+}
+
+.activo:hover {
+  background-color: brown;
+}
+
+/* button {
+  background-color: aquamarine;
+} */
+
+#boton1 {
+  color: aqua;
+}
