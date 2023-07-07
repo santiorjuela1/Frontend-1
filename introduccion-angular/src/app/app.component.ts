@@ -48,4 +48,8 @@ export class AppComponent {
   public concat(list: string[]): string[] {
     return this.nombres.concat(list);
   }
+
+  public mostrarEvento(event: any): void {
+    console.log(event);
+  }
 }
