@@ -1,0 +1,68 @@
+<p>padre works!</p>
+<button (click)="enviarMensaje()">Enviar Libros</button>
+<app-hijo
+  [recibido]="mensajeHijo"
+  (enviarPapa)="recibirMensaje($event)"
+></app-hijo>
+
+<p>{{ mensajePadre }}</p>
+
+<section class="ngModel">
+  <p-card
+    header="DIRECTIVA NGMODEL"
+    [style]="{ width: '25rem', 'margin-bottom': '2em' }"
+  >
+    <mat-form-field>
+      <mat-label>Ingrese el autor</mat-label>
+      <input matInput type="text" [(ngModel)]="libro.autor" />
+      <button
+        *ngIf="libro.autor"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="libro.autor = ''"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Ingrese el ID del libro</mat-label>
+      <input matInput type="number" [(ngModel)]="libro.idLibro" />
+      <button
+        *ngIf="libro.idLibro"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="libro.idLibro = undefined"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Ingrese el título</mat-label>
+      <input matInput type="text" [(ngModel)]="libro.titulo" />
+      <button
+        *ngIf="libro.titulo"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="libro.titulo = ''"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <div>
+      <button
+        mat-raised-button
+        color="primary"
+        class="btn_libro"
+        (click)="mostrarLibro()"
+      >
+        Mostrar Libro
+      </button>
+    </div>
+  </p-card>
+</section>

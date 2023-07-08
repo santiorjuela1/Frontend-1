@@ -1,0 +1,9 @@
+<p>hijo works!</p>
+<p *ngFor="let libro of recibido">
+  {{ libro.autor }} , {{ libro.idLibro }}, {{ libro.titulo }}
+</p>
+
+<div>
+  <p>Envio hacia el padre</p>
+  <button (click)="enviar()">Enviar Informacion</button>
+</div>
