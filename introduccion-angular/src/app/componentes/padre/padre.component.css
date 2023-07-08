@@ -1,0 +1,12 @@
+.btn_libro {
+  margin-top: 15px;
+  display: flex;
+}
+
+.ngModel {
+  margin-left: 20px;
+}
+
+mat-form-field {
+  display: flex;
+}
