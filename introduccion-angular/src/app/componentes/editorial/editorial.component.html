@@ -1,0 +1,22 @@
+<p>editorial works!</p>
+<form
+  [formGroup]="formEditorial"
+  class="editorial"
+  (ngSubmit)="enviarEditorial()"
+>
+  <p>Nombre del Editorial</p>
+  <input type="text" formControlName="nombreEditorial" />
+  <p>Dirección</p>
+  <input type="text" formControlName="direccion" />
+
+  <button type="submit" [disabled]="formEditorial.invalid">
+    Enviar Editorial
+  </button>
+</form>
+
+<button (click)="obtenerEditorial()">Obtener editorial</button>
+
+<p>EDITORIAL CREADO</p>
+<p>{{ Ieditorial.id | currency }}</p>
+<p>{{ Ieditorial.nombreEditorial | lowercase }}</p>
+<p>{{ Ieditorial.direccion }}</p>
