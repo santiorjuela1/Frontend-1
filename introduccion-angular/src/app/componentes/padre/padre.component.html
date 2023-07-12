@@ -1,9 +1,9 @@
 <p>padre works!</p>
-<button (click)="enviarMensaje()">Enviar Libros</button>
+<!-- <button (click)="enviarMensaje()">Enviar Libros</button>
 <app-hijo
   [recibido]="mensajeHijo"
   (enviarPapa)="recibirMensaje($event)"
-></app-hijo>
+></app-hijo> -->
 
 <p>{{ mensajePadre }}</p>
 
@@ -65,4 +65,17 @@
       </button>
     </div>
   </p-card>
+</section>
+
+<section class="reactive_form">
+  <h2>REACTIVE FORM</h2>
+  <form [formGroup]="formLibro" (ngSubmit)="enviarLibro()">
+    <span>Id Libro</span>
+    <input type="number" formControlName="idLibro" />
+    <span>Autor</span>
+    <input type="text" formControlName="autor" />
+    <span>Título</span>
+    <input type="text" formControlName="titulo" />
+    <button type="submit" [disabled]="formLibro.invalid">Enviar Libro</button>
+  </form>
 </section>

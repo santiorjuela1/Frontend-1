@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlEditorial: 'http://localhost:8080/apiEditorial/v1',
 };

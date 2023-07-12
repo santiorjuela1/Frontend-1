@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PadreComponent } from './componentes/padre/padre.component';
 import { HijoComponent } from './componentes/hijo/hijo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -14,6 +14,8 @@ import { CardModule } from 'primeng/card';
 import { UserComponent } from './componentes/user/user.component';
 import { ServicioDirective } from './varios/servicio.directive';
 import { ServicioService } from './varios/servicio.service';
+import { EditorialComponent } from './componentes/editorial/editorial.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { ServicioService } from './varios/servicio.service';
     HijoComponent,
     UserComponent,
     ServicioDirective,
+    EditorialComponent,
   ],
   imports: [
     CardModule,
@@ -32,6 +35,8 @@ import { ServicioService } from './varios/servicio.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [ServicioService],
   bootstrap: [AppComponent],
