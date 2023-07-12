@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   urlEditorial: 'http://localhost:8080/apiEditorial/v1',
+  urlRickAndMorty : 'https://rickandmortyapi.com/api',
 };
 
 /*

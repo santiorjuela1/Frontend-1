@@ -16,6 +16,9 @@ import { ServicioDirective } from './varios/servicio.directive';
 import { ServicioService } from './varios/servicio.service';
 import { EditorialComponent } from './componentes/editorial/editorial.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RickAndMortyComponent } from './componentes/rick-and-morty/rick-and-morty.component';
+import {MatTableModule} from '@angular/material/table';
+import { PruebaTablasComponent } from './componentes/prueba-tablas/prueba-tablas.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     UserComponent,
     ServicioDirective,
     EditorialComponent,
+    RickAndMortyComponent,
+    PruebaTablasComponent,
   ],
   imports: [
     CardModule,
@@ -37,6 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatTableModule
   ],
   providers: [ServicioService],
   bootstrap: [AppComponent],
