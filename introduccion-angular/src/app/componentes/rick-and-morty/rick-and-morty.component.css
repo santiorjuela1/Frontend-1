@@ -1,8 +1,12 @@
 .mat-elevation-z8{
     width : 700px;
-    margin-left: 5vh;
+    margin-left: 50vh;
 }
 
 .filtro{
-    margin-left: 10vh;
+    margin-left: 50vh;
+}
+
+.episodeName{
+    cursor: pointer;
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
 import { Editorial } from 'src/app/models/editorial';
 import { EditorialServiceService } from 'src/app/services/editorial-service.service';
 
@@ -11,7 +10,7 @@ import { EditorialServiceService } from 'src/app/services/editorial-service.serv
 })
 export class EditorialComponent implements OnInit {
   public Ieditorial!: any;
-  public editorialObtenido?: Observable<any>;
+
 
   public formEditorial = new FormGroup({
     nombreEditorial: new FormControl('', Validators.required),

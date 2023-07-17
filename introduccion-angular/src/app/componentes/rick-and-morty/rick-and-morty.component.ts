@@ -1,6 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { RickAndMortyService } from 'src/app/services/rick-and-morty.service';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { EpisodeDialogComponent } from '../episode-dialog-component/episode-dialog.component';
 
 export interface EpisodeRaM {
   id : number;
@@ -16,7 +18,7 @@ export interface EpisodeRaM {
 })
 
 export class RickAndMortyComponent implements OnInit {
-  constructor(private service: RickAndMortyService) {}
+  constructor(private service: RickAndMortyService, public dialog : MatDialog) {}
 
   allEpisodesToBeShown : EpisodeRaM[] =[];
   displayedColumns: string[] = ['id', 'episode', 'name', 'airDate'];
@@ -36,8 +38,7 @@ export class RickAndMortyComponent implements OnInit {
   public getAllEpisodes() {
     this.service.getAllEpisodes().subscribe((episodios) => {
       this.allEpisodes = episodios.results;
-      console.log(this.allEpisodes);
-
+      
       this.allEpisodesToBeShown = this.allEpisodes.map((eachEpisode) => {
         return {
           id: eachEpisode.id,
@@ -46,8 +47,14 @@ export class RickAndMortyComponent implements OnInit {
           airDate: eachEpisode.air_date
         };
       });
-
       this.dataSource.data = this.allEpisodesToBeShown;
     });
   }
+
+openEpisodeDialog(episode : EpisodeRaM){
+  this.dialog.open(EpisodeDialogComponent, {
+    data: episode
+  })
+}
+
 }

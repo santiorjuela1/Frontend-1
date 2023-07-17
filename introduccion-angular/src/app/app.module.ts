@@ -19,6 +19,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { RickAndMortyComponent } from './componentes/rick-and-morty/rick-and-morty.component';
 import {MatTableModule} from '@angular/material/table';
 import { PruebaTablasComponent } from './componentes/prueba-tablas/prueba-tablas.component';
+import { MenuComponent } from './componentes/menu/menu.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { EpisodeDialogComponent } from './componentes/episode-dialog-component/episode-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +37,9 @@ import { PruebaTablasComponent } from './componentes/prueba-tablas/prueba-tablas
     EditorialComponent,
     RickAndMortyComponent,
     PruebaTablasComponent,
+    MenuComponent,
+    IniciarSesionComponent,
+    EpisodeDialogComponent
   ],
   imports: [
     CardModule,
@@ -42,7 +52,10 @@ import { PruebaTablasComponent } from './componentes/prueba-tablas/prueba-tablas
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatDialogModule
   ],
   providers: [ServicioService],
   bootstrap: [AppComponent],
